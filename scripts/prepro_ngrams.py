@@ -2,6 +2,10 @@
 Precompute ngram counts of captions, to accelerate cider computation during training time.
 """
 
+import sys
+sys.path.append("/content/ImageCaptioning.pytorch")
+sys.path.append("/content/ImageCaptioning.pytorch/cider")
+
 import os
 import json
 import argparse
@@ -9,8 +13,7 @@ from six.moves import cPickle
 import captioning.utils.misc as utils
 from collections import defaultdict
 
-import sys
-sys.path.append("cider")
+
 from pyciderevalcap.ciderD.ciderD_scorer import CiderScorer
 
 
